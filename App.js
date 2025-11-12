@@ -10,7 +10,7 @@ import Login from './src/components/Login';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from './src/database/firebaseconfig';
 import ProductosRealtime from './src/views/ProductosRealtime';
-
+import CalculadoraIMC from './src/views/CalculadoraIMC';
 
 const Stack = createNativeStackNavigator();
 
@@ -125,6 +125,17 @@ export default function App() {
               )}
             </Stack.Screen>
 
+<Stack.Screen 
+    name="CalculadoraIMC" 
+    options={{ 
+        title: '📊 Calculadora IMC',
+        headerBackTitle: 'Atrás'
+    }}
+>
+    {(props) => (
+        <CalculadoraIMC {...props} cerrarSesion={() => cerrarSesion(props.navigation)} />
+    )}
+</Stack.Screen>
 
             <Stack.Screen 
               name="Promedios" 

@@ -52,7 +52,17 @@ export default function Home({ navigation, cerrarSesion }) {
   route: 'ProductosRealtime',
   color: '#ec4899',
   icon: ''
-}
+},
+
+
+    {
+      id: 6,
+      title: '⚖️ Calculadora IMC',
+      description: 'Calcular índice de masa corporal',
+      route: 'CalculadoraIMC',
+      color: '#8b5cf6',
+      icon: ''
+    }
   ];
 
   return (
