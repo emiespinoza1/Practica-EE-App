@@ -9,6 +9,8 @@ import Usuarios from './src/views/Usuarios';
 import Login from './src/components/Login';
 import { onAuthStateChanged, signOut } from 'firebase/auth';
 import { auth } from './src/database/firebaseconfig';
+import ProductosRealtime from './src/views/ProductosRealtime';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -108,6 +110,22 @@ export default function App() {
                 <Productos {...props} cerrarSesion={() => cerrarSesion(props.navigation)} />
               )}
             </Stack.Screen>
+
+
+          
+            <Stack.Screen 
+              name="ProductosRealtime" 
+              options={{ 
+                title: '🔄 Productos Tiempo Real',
+                headerBackTitle: 'Atrás'
+              }}
+            >
+              {(props) => (
+                <ProductosRealtime {...props} cerrarSesion={() => cerrarSesion(props.navigation)} />
+              )}
+            </Stack.Screen>
+
+
             <Stack.Screen 
               name="Promedios" 
               options={{ 

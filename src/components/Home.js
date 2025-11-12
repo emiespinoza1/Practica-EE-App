@@ -26,6 +26,8 @@ export default function Home({ navigation, cerrarSesion }) {
       color: '#3b82f6',
       icon: ''
     },
+
+    
     {
       id: 3,
       title: '📊 Promedios',
@@ -42,6 +44,15 @@ export default function Home({ navigation, cerrarSesion }) {
       color: '#f59e0b',
       icon: ''
     },
+
+    {
+  id: 5,
+  title: '🔄 Productos RealTime',
+  description: 'Base de datos en tiempo real',
+  route: 'ProductosRealtime',
+  color: '#ec4899',
+  icon: ''
+}
   ];
 
   return (
